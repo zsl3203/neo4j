@@ -11,7 +11,7 @@ tar -xf neo4j-community-3.5.22-unix.tar.gz
 ```
 cd neo4j-community-3.5.22/conf
 ```
-### 4. 修改配置，删除54、71、75、79行的#
+### 4. 修改配置，删除54、71、75、79、245行的#
 ```
 dbms.connectors.default_listen_address=0.0.0.0
 
@@ -20,6 +20,8 @@ dbms.connector.bolt.listen_address=:7687
 dbms.connector.http.listen_address=:7474
 
 dbms.connector.https.listen_address=:7473
+
+dbms.security.allow_csv_import_from_file_urls=true
 ```
 ### 5. 启动neo4j server
 ```
